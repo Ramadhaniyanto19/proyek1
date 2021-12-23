@@ -22,6 +22,7 @@ $html = '<!DOCTYPE html>
             <th>Nama Barang</th>
             <th>Harga</th>
             <th>Foto</th>
+            <th>Tanggal Masuk</th>
             <th>Deskripsi</th>
           </tr>';
 
@@ -32,7 +33,8 @@ $i = 1;
           <td>'. $pdk["nama_barang"] .'</td>
           <td width = "15%">'. $pdk["harga_barang"] .'</td>
           <td> <img src="img/'. $pdk["foto_barang"]. '" width = "30%"></td>
-          <td width = "45%">'. $pdk["deskripsi_barang"] .'</td>
+          <td width = "20%">'. $pdk["tanggal_barang"] .'</td>
+          <td width = "20%%">'. $pdk["deskripsi_barang"] .'</td>
       </tr>';
     }
     

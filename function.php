@@ -63,12 +63,13 @@ function tambah($data){
         return false;
     }
 
+    $tanggal =htmlspecialchars($data["tanggal_barang"]);
     $deskripsi =htmlspecialchars($data["deskripsi_barang"]);
 
     //query insert
     $query = "INSERT INTO produk
               VALUES
-              (null , '$nama', '$harga', '$foto', '$deskripsi')";
+              (null , '$nama', '$harga', '$foto', '$tanggal', '$deskripsi')";
 
     mysqli_query($conn, $query);
 
@@ -146,6 +147,7 @@ function ubah ($data){
         $foto = upload();
     }
 
+    $tanggal =htmlspecialchars($data["tanggal_barang"]);
     $deskripsi =htmlspecialchars($data["deskripsi_barang"]);
    
 
@@ -156,6 +158,7 @@ function ubah ($data){
                 nama_barang = '$nama', 
                 harga_barang = '$harga',
                 foto_barang = '$foto',
+                tanggal_barang = '$tanggal',
                 deskripsi_barang = '$deskripsi'
                 WHERE id_barang = '$id'";
      mysqli_query($conn, $query);

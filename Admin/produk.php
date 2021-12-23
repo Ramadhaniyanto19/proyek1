@@ -126,6 +126,7 @@ if(isset ($_POST["cari"])){
                                     <th>Nama Barang</th>
                                     <th>Harga</th>
                                     <th>Foto</th>
+                                    <th>Tanggal Masuk</th>
                                     <th>Deskripsi</th>
                                     <th>Aksi</th>
                                 </tr>
@@ -145,6 +146,9 @@ if(isset ($_POST["cari"])){
                                         <?php echo $pdk["harga_barang"]; ?>
                                     </td>
                                     <td><img src="img/<?php echo $pdk["foto_barang"]; ?>" width="130px"></td>
+                                    <td>
+                                        <?php echo $pdk["tanggal_barang"]; ?>
+                                    </td>
                                     <td width="400px">
                                         <?php echo $pdk["deskripsi_barang"]; ?>
                                     </td>
@@ -207,6 +211,10 @@ if(isset ($_POST["cari"])){
                                             <input type="file" name="foto_barang" id="foto_barang" for="foto_barang" class="form-control" required>
                                         </div>
                                         <div class="form-group">
+                                            <label for="tanggal_barang" class="form-label">Tanggal</label>
+                                            <input type="date" name="tanggal_barang" id="tanggal_barang" for="tanggal_barang" class="form-control" required>
+                                        </div>
+                                        <div class="form-group">
                                             <label for="deskripsi_barang" class="form-label">Deskripsi Barang</label>
                                             <input type="teks" name="deskripsi_barang" id="deskripsi_barang" for="deskripsi_barang" class="form-control" required>
                                         </div>
@@ -249,6 +257,10 @@ if(isset ($_POST["cari"])){
                                             <br>
                                             <img src="img/<?php echo $pdk['foto_barang']; ?>" width="120px">
                                             <input type="file" name="foto_barang" id="foto_barang" for="foto_barang" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="tanggal_barang" class="form-label">Tanggal</label>
+                                            <input type="date" name="tanggal_barang" id="tanggal_barang" for="tanggal_barang" class="form-control" required>
                                         </div>
                                         <div class="form-group">
                                             <label for="deskripsi_barang" class="form-label">Deskripsi Barang</label>
