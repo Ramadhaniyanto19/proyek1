@@ -56,7 +56,6 @@ function tambah($data){
     //ambil data
     $nama = htmlspecialchars($data["nama_barang"]); 
     $harga  = htmlspecialchars($data["harga_barang"]);
-    $jumlah =htmlspecialchars($data["jumlah_barang"]);
    
     //upload gambar
     $foto = upload();
@@ -69,7 +68,7 @@ function tambah($data){
     //query insert
     $query = "INSERT INTO produk
               VALUES
-              (null , '$nama', '$harga', '$jumlah', '$foto', '$deskripsi')";
+              (null , '$nama', '$harga', '$foto', '$deskripsi')";
 
     mysqli_query($conn, $query);
 
@@ -139,7 +138,6 @@ function ubah ($data){
     $id = $data["id"];
     $nama = htmlspecialchars($data["nama_barang"]); 
     $harga  = htmlspecialchars($data["harga_barang"]);
-    $jumlah =htmlspecialchars($data["jumlah_barang"]);
     $fotolama = htmlspecialchars($data["fotolama"]);
     //cek user ganti gambar ga
     if($_FILES["foto_barang"]['error'] === 4){
@@ -157,7 +155,6 @@ function ubah ($data){
     $query = "UPDATE produk SET
                 nama_barang = '$nama', 
                 harga_barang = '$harga',
-                jumlah_barang = '$jumlah',
                 foto_barang = '$foto',
                 deskripsi_barang = '$deskripsi'
                 WHERE id_barang = '$id'";

@@ -109,6 +109,9 @@ if(isset ($_POST["search"])){
                     <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                     Tambah Data
                     </button>
+                    <a type="button" target="_blank" class="btn btn-warning" href="cetak_penjual.php" style="color: white;">
+                    Cetak Data Penjual
+                    </a>
                      <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0 float-end" action="" method="POST"> 
                         <div class="input-group">
                             <input class="form-control" type="text" placeholder="Cari" aria-label="Cari" autocomplete="off" name="keyword"

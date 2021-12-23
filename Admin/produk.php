@@ -108,6 +108,9 @@ if(isset ($_POST["cari"])){
                     <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                     Tambah Data
                     </button>
+                    <a type="button" target="_blank" class="btn btn-warning" href="cetak_produk.php" style="color: white;">
+                    Cetak Data Produk
+                    </a>
                       <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0 float-end" action="" method="POST"> 
                         <div class="input-group">
                             <input class="form-control" type="text" placeholder="Cari" aria-label="Cari" autocomplete="off" name="keyword"
@@ -122,7 +125,6 @@ if(isset ($_POST["cari"])){
                                     <th>No</th>
                                     <th>Nama Barang</th>
                                     <th>Harga</th>
-                                    <th>Jumlah</th>
                                     <th>Foto</th>
                                     <th>Deskripsi</th>
                                     <th>Aksi</th>
@@ -141,9 +143,6 @@ if(isset ($_POST["cari"])){
                                     </td>
                                     <td>
                                         <?php echo $pdk["harga_barang"]; ?>
-                                    </td>
-                                    <td>
-                                        <?php echo $pdk["jumlah_barang"]; ?>
                                     </td>
                                     <td><img src="img/<?php echo $pdk["foto_barang"]; ?>" width="130px"></td>
                                     <td width="400px">
@@ -204,10 +203,6 @@ if(isset ($_POST["cari"])){
                                             <input type="numbers" name="harga_barang" id="harga_barang" for="harga_barang" class="form-control" required>
                                         </div>
                                         <div class="form-group">
-                                            <label for="jumlah_barang" class="form-label">Jumlah Barang</label>
-                                            <input type="number" name="jumlah_barang" id="jumlah_barang" for="jumlah_barang" class="form-control" required>
-                                        </div>
-                                        <div class="form-group">
                                             <label for="foto_barang" class="form-label">Foto Barang</label>
                                             <input type="file" name="foto_barang" id="foto_barang" for="foto_barang" class="form-control" required>
                                         </div>
@@ -248,10 +243,6 @@ if(isset ($_POST["cari"])){
                                         <div class="form-group">
                                             <label for="harga_barang" class="form-label">Harga Barang</label>
                                             <input type="numbers" name="harga_barang" id="harga_barang" for="harga_barang" class="form-control" value="<?php echo $pdk['harga_barang'];?>" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="jumlah_barang" class="form-label">Jumlah Barang</label>
-                                            <input type="number" name="jumlah_barang" id="jumlah_barang" for="jumlah_barang" value="<?php echo $pdk['jumlah_barang'];?>" class="form-control" required>
                                         </div>
                                         <div class="form-group">
                                             <label for="foto_barang" class="form-label">Foto Barang</label>
