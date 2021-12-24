@@ -20,6 +20,7 @@ $html = '<!DOCTYPE html>
           <tr>
             <th>No</th>
             <th>Nama Barang</th>
+            <th>Nama Toko</th>
             <th>Harga</th>
             <th>Foto</th>
             <th>Tanggal Masuk</th>

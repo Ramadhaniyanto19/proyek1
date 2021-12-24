@@ -16,13 +16,13 @@
                                 </div>
                                 <div class="carousel-inner h-100">
                                     <div class="carousel-item active">
-                                        <img src="../assets/img/kerajinan1.jpg" class=" img-fluid d-block w-100" alt="...">
+                                        <img src="../assets/img/kerajinan1.jpg" class=" img-fluid d-block w-100 h-100" alt="...">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="../assets/img/pangandaran.jpg" class=" img-fluid d-block w-100 " alt="...">
+                                        <img src="../assets/img/pangandaran.jpg" class=" img-fluid d-block w-100 h-100" alt="...">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="../assets/img/kerajinan3.jpg" class="img-fluid d-block w-100" alt="...">
+                                        <img src="../assets/img/kerajinan3.jpg" class="img-fluid d-block w-100 h-100" alt="...">
                                     </div>
                                 </div>
                                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -36,8 +36,6 @@
                             </div>
                         </div>
                     </div>
-                        <!-- <center><img src="./assets/img/tokokita.jpeg" alt="" class=" rounded-circle" 
-                        style="width:400px;"></center> -->
                 </div>
             </main>
 
