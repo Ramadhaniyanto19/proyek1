@@ -77,6 +77,7 @@ function tambah($data){
     return mysqli_affected_rows($conn);
 }
 
+
 function upload(){
     $namaFile = $_FILES['foto_barang']['name'];
     $ukuranFile = $_FILES['foto_barang']['size'];

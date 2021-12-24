@@ -223,7 +223,7 @@ if(isset ($_POST["cari"])){
                                         </div>
                                         <div class="form-group">
                                             <label for="tanggal_barang" class="form-label">Tanggal</label>
-                                            <input type="date" name="tanggal_barang" id="tanggal_barang" for="tanggal_barang" class="form-control" value="<?php echo $pdk['$tanggal_barang'];?>" required>
+                                            <input type="date" name="tanggal_barang" id="tanggal_barang" for="tanggal_barang" class="form-control" value="<?php echo $pdk['tanggal_barang'];?>" required>
                                         </div>
                                         <div class="form-group">
                                             <label for="deskripsi_barang" class="form-label">Deskripsi Barang</label>
