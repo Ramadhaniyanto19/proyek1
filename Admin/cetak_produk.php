@@ -31,9 +31,10 @@ $i = 1;
       $html .= '<tr>
           <td>'. $i++ .'</td>
           <td>'. $pdk["nama_barang"] .'</td>
+          <td>'. $pdk["nama_toko"] .'</td>
           <td width = "15%">'. $pdk["harga_barang"] .'</td>
           <td> <img src="img/'. $pdk["foto_barang"]. '" width = "30%"></td>
-          <td width = "20%">'. $pdk["tanggal_barang"] .'</td>
+          <td width = "10%%">'. $pdk["tanggal_barang"] .'</td>
           <td width = "20%%">'. $pdk["deskripsi_barang"] .'</td>
       </tr>';
     }

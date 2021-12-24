@@ -16,13 +16,13 @@
                                 </div>
                                 <div class="carousel-inner h-100">
                                     <div class="carousel-item active">
-                                        <img src="../assets/img/kerajinan1.jpg" class="d-block w-100" alt="...">
+                                        <img src="../assets/img/kerajinan1.jpg" class=" img-fluid d-block w-100" alt="...">
                                     </div>
                                     <div class="carousel-item">
                                         <img src="../assets/img/pangandaran.jpg" class=" img-fluid d-block w-100 " alt="...">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="../assets/img/kerajinan3.jpg" class="d-block w-100" alt="...">
+                                        <img src="../assets/img/kerajinan3.jpg" class="img-fluid d-block w-100" alt="...">
                                     </div>
                                 </div>
                                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -41,20 +41,6 @@
                 </div>
             </main>
 
-            <!-- Footer -->
-            <!-- <footer class="py-4 bg-light mt-auto">
-                <div class="container-fluid px-4">
-                    <div class="d-flex align-items-center justify-content-between small">
-                        <div class="text-muted">Copyright &copy; Your Website 2021</div>
-                        <div>
-                            <a href="#">Privacy Policy</a>
-                            &middot;
-                            <a href="#">Terms &amp; Conditions</a>
-                        </div>
-                    </div>
-                </div>
-            </footer> -->
-            <!-- endfooter -->
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

@@ -75,6 +75,7 @@ if(isset ($_POST["cari"])){
                                 <tr>
                                     <th>No</th>
                                     <th>Nama Barang</th>
+                                    <th>Nama Toko</th>
                                     <th>Harga</th>
                                     <th>Foto</th>
                                     <th>Tanggal Masuk</th>
@@ -94,13 +95,16 @@ if(isset ($_POST["cari"])){
                                         <?php echo $pdk["nama_barang"]; ?>
                                     </td>
                                     <td>
+                                        <?php echo $pdk["nama_toko"]; ?>
+                                    </td>
+                                    <td>
                                         <?php echo $pdk["harga_barang"]; ?>
                                     </td>
                                     <td><img src="img/<?php echo $pdk["foto_barang"]; ?>" width="130px"></td>
                                     <td>
                                         <?php echo $pdk["tanggal_barang"]; ?>
                                     </td>
-                                    <td width="400px">
+                                    <td width="300px">
                                         <?php echo $pdk["deskripsi_barang"]; ?>
                                     </td>
                                     <td>
@@ -154,6 +158,10 @@ if(isset ($_POST["cari"])){
                                             <input type="text" name="nama_barang" id="nama_barang" for="nama_barang" class="form-control" required>
                                         </div>
                                         <div class="form-group">
+                                            <label for="nama_toko" class="form-label">Nama Toko</label>
+                                            <input type="text" name="nama_toko" id="nama_toko" for="nama_toko" class="form-control" required>
+                                        </div>
+                                        <div class="form-group">
                                             <label for="harga_barang" class="form-label">Harga Barang</label>
                                             <input type="numbers" name="harga_barang" id="harga_barang" for="harga_barang" class="form-control" required>
                                         </div>
@@ -200,6 +208,10 @@ if(isset ($_POST["cari"])){
                                             <input type="text" name="nama_barang" id="nama_barang" for="nama_barang" class="form-control" value="<?php echo $pdk['nama_barang'];?>" required>
                                         </div>
                                         <div class="form-group">
+                                            <label for="nama_toko" class="form-label">Nama Toko</label>
+                                            <input type="text" name="nama_toko" id="nama_toko" for="nama_toko" class="form-control" value="<?php echo $pdk['nama_toko'];?>" required>
+                                        </div>
+                                        <div class="form-group">
                                             <label for="harga_barang" class="form-label">Harga Barang</label>
                                             <input type="numbers" name="harga_barang" id="harga_barang" for="harga_barang" class="form-control" value="<?php echo $pdk['harga_barang'];?>" required>
                                         </div>
@@ -211,7 +223,7 @@ if(isset ($_POST["cari"])){
                                         </div>
                                         <div class="form-group">
                                             <label for="tanggal_barang" class="form-label">Tanggal</label>
-                                            <input type="date" name="tanggal_barang" id="tanggal_barang" for="tanggal_barang" class="form-control" required>
+                                            <input type="date" name="tanggal_barang" id="tanggal_barang" for="tanggal_barang" class="form-control" value="<?php echo $pdk['$tanggal_barang'];?>" required>
                                         </div>
                                         <div class="form-group">
                                             <label for="deskripsi_barang" class="form-label">Deskripsi Barang</label>
@@ -230,20 +242,6 @@ if(isset ($_POST["cari"])){
                     <!-- end modal -->
             </main>
 
-            <!-- Footer -->
-            <footer class="py-4 bg-light mt-auto">
-                <div class="container-fluid px-4">
-                    <div class="d-flex align-items-center justify-content-between small">
-                        <div class="text-muted">Copyright &copy; Your Website 2021</div>
-                        <div>
-                            <a href="#">Privacy Policy</a>
-                            &middot;
-                            <a href="#">Terms &amp; Conditions</a>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-            <!-- endfooter -->
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

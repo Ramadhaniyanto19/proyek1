@@ -55,6 +55,7 @@ function tambah($data){
 
     //ambil data
     $nama = htmlspecialchars($data["nama_barang"]); 
+    $toko = htmlspecialchars($data["nama_toko"]); 
     $harga  = htmlspecialchars($data["harga_barang"]);
    
     //upload gambar
@@ -69,7 +70,7 @@ function tambah($data){
     //query insert
     $query = "INSERT INTO produk
               VALUES
-              (null , '$nama', '$harga', '$foto', '$tanggal', '$deskripsi')";
+              (null , '$nama', '$toko', '$harga', '$foto', '$tanggal', '$deskripsi')";
 
     mysqli_query($conn, $query);
 
@@ -138,6 +139,7 @@ function ubah ($data){
     //ambil data
     $id = $data["id"];
     $nama = htmlspecialchars($data["nama_barang"]); 
+    $toko = htmlspecialchars($data["nama_toko"]); 
     $harga  = htmlspecialchars($data["harga_barang"]);
     $fotolama = htmlspecialchars($data["fotolama"]);
     //cek user ganti gambar ga
@@ -156,6 +158,7 @@ function ubah ($data){
 
     $query = "UPDATE produk SET
                 nama_barang = '$nama', 
+                nama_toko = '$toko', 
                 harga_barang = '$harga',
                 foto_barang = '$foto',
                 tanggal_barang = '$tanggal',
@@ -238,5 +241,6 @@ function cariPenjual($keyword){
                 deskripsi_penjual LIKE '%$keyword%'";
     return query($query);
 }
+
 
 ?>
