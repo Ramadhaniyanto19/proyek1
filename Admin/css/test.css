@@ -1,0 +1,19 @@
+.testing {
+  color: lightblue;
+}
+@media screen and (max-width: 755px) {
+  .carousel-inner {
+    height: auto;
+  }
+}
+
+.carousel-inner {
+  height: 425px;
+  width: auto;
+}
+
+.carousel-inner > .carousel-item > img {
+  margin: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
