@@ -22,27 +22,37 @@ if( isset($_POST["Register"])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TokoKita</title>
+    <title>Jual Kerajinan Tangan Pangandaran</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="shorcut icon" href="favicon.ico" />
+    <link rel="icon" type="image/png" href="ico/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="ico/favicon-16x16.png" sizes="16x16" />    
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
     <!-- Css -->
-    <link rel="stylesheet" href="css/tess.css">
+    <link rel="stylesheet" href="css/baru.css">
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/282f37c3b4.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="body-img">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-        <div class="container">
-            <a class="navbar-brand fs-3 fw-bold" href="index.php">TokoKita</a>
-        </div>
-    </nav>
+<body class="body-img">
+<nav>
+<ul class="nav justify-content-start">
+        <li class="nav-item">
+         <a class="nav-link active" aria-current="page" href="index.php"><font face="Tentang Nanti Demo" style="color: #8FB8CA" size="6"></font></a>
+        </li>        
+</ul>
+    <ul class="nav container justify-content-start">
+        <a class="navbar-brand fs-10" href="index.php">  
+        <img src="assets/img/logo.png" alt="" width="30" height="30" class="d-inline-block align-text-top"> <font face="Java Calligraphy" style="color: #805C5F"  size="3" >Kerajinan Tangan Pangandaran</font></a>  
+</nav>
+    </ul>
+    </nav> 
     
-<div class="container login d-flex justify-content-center">
+<div class="container login d-flex justify-content-start">
             <div class="bg-login">
                 <h1 class="fw-bold text-center">Registrasi</h1>
                 <div class="login-method">
@@ -66,6 +76,7 @@ if( isset($_POST["Register"])){
                 </div>
             </div>
         </div>
+
 <!-- <section>
     <div class="regis justify-content-center container d-flex pb-4">
         <form action="login.php" method="POST">

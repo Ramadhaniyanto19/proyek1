@@ -55,8 +55,8 @@ function tambah($data){
 
     //ambil data
     $nama = htmlspecialchars($data["nama_barang"]); 
-    $toko = htmlspecialchars($data["nama_toko"]); 
     $harga  = htmlspecialchars($data["harga_barang"]);
+    $jumlah =htmlspecialchars($data["jumlah_barang"]);
    
     //upload gambar
     $foto = upload();
@@ -64,19 +64,17 @@ function tambah($data){
         return false;
     }
 
-    $tanggal =htmlspecialchars($data["tanggal_barang"]);
     $deskripsi =htmlspecialchars($data["deskripsi_barang"]);
 
     //query insert
     $query = "INSERT INTO produk
               VALUES
-              (null , '$nama', '$toko', '$harga', '$foto', '$tanggal', '$deskripsi')";
+              (null , '$nama', '$harga', '$jumlah', '$foto', '$deskripsi')";
 
     mysqli_query($conn, $query);
 
     return mysqli_affected_rows($conn);
 }
-
 
 function upload(){
     $namaFile = $_FILES['foto_barang']['name'];
@@ -140,8 +138,8 @@ function ubah ($data){
     //ambil data
     $id = $data["id"];
     $nama = htmlspecialchars($data["nama_barang"]); 
-    $toko = htmlspecialchars($data["nama_toko"]); 
     $harga  = htmlspecialchars($data["harga_barang"]);
+    $jumlah =htmlspecialchars($data["jumlah_barang"]);
     $fotolama = htmlspecialchars($data["fotolama"]);
     //cek user ganti gambar ga
     if($_FILES["foto_barang"]['error'] === 4){
@@ -150,7 +148,6 @@ function ubah ($data){
         $foto = upload();
     }
 
-    $tanggal =htmlspecialchars($data["tanggal_barang"]);
     $deskripsi =htmlspecialchars($data["deskripsi_barang"]);
    
 
@@ -159,10 +156,9 @@ function ubah ($data){
 
     $query = "UPDATE produk SET
                 nama_barang = '$nama', 
-                nama_toko = '$toko', 
                 harga_barang = '$harga',
+                jumlah_barang = '$jumlah',
                 foto_barang = '$foto',
-                tanggal_barang = '$tanggal',
                 deskripsi_barang = '$deskripsi'
                 WHERE id_barang = '$id'";
      mysqli_query($conn, $query);
@@ -173,7 +169,8 @@ function ubah ($data){
 //Search / cari produk
 function cari($keyword){
     $query = "SELECT *FROM produk 
-                WHERE nama_barang LIKE '%$keyword%'";
+                WHERE nama_barang LIKE '%$keyword%' OR
+                deskripsi_barang LIKE '%$keyword%'";
     return query($query);
 }
 
@@ -242,74 +239,4 @@ function cariPenjual($keyword){
     return query($query);
 }
 
-
-
-
-//Tambah data admin
-
-
-function tambahAdmin($data){
-    global $conn;
-
-    //ambil data
-    $username = ($data["username"]); 
-    $password  = ($data["password"]);
-    $level = $data['level'];
-   
-    //query insert
-    $query = "INSERT INTO user
-              VALUES
-              (null , '$username', '$password', '$level')";
-
-    mysqli_query($conn, $query);
-
-    return mysqli_affected_rows($conn);
-}
-
-//UBAH DATA admin
-function ubahAdmin ($data){
-    global $conn;
-    
-    //ambil data
-    $id = $data['id'];
-    $username = ($data["username"]); 
-    $password  = ($data["password"]);
-
-    
-
-
-    $query = "UPDATE user SET
-                username = '$username', 
-                pass = '$password'
-                WHERE id = '$id'";
-     mysqli_query($conn, $query);
-
-    return mysqli_affected_rows($conn);
-}
-
-//HAPUS ADmin
-function hapusAdmin ($id) {
-    global $conn;
-    $query = "DELETE FROM user WHERE id = $id";
-    mysqli_query($conn, $query) or die (mysqli_error($conn));
-    return mysqli_affected_rows($conn);
-}
-
-//Search / cari admin
-function cariAdmin($keyword){
-    $query = "SELECT *FROM user 
-                WHERE username LIKE '%$keyword%' OR
-                pass LIKE '%$keyword%' OR
-                id LIKE '%$keyword%'";
-    return query($query);
-}
-
-//function Rupiah
-function rupiah($angka){
-    $hasil = 'Rp ' . number_format($angka, 0, ",", "." );
-    return $hasil;
-}
-
-
- 
 ?>

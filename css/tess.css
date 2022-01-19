@@ -29,6 +29,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
+  background-position: fixed;
   /* background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -72,9 +73,9 @@
   background-size: cover;
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 800px) {
   .login {
-    margin-top: 15%;
+    margin-top: 50px;
   }
 }
 /* 

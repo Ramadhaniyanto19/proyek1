@@ -1,10 +1,10 @@
 <?php
 session_start();
 require 'function.php';
-// login("biasa");
 if($_SESSION['level']==""){
-		header("location: login.php");
+		header("location: index.php");
 	} 
+
 ?>
 
 
@@ -37,10 +37,11 @@ if($_SESSION['level']==""){
 </head>
 
 <body>
+<div class="bg-info p-2 text-dark bg-opacity-10">
     <!-- Navigation-->
-    <nav class="navbar navbar-light fixed-top" data-aos="fade-down" data-aos-duration = "2000">
+    <nav class="navbar navbar-light stiky-top ">
   <div class="container-fluid">  
-    <a class="navbar-brand fs-6" href="index.php" ><img src="assets/img/logo.png" alt="" width="25" height="25" class="d-inline-block align-text-top"> <font face="Java Calligraphy" style="color: #c08457"; size="4" >Kerajinan Tangan Pangandaran</font></a>
+    <a class="navbar-brand fs-6" href="index.php" ><img src="assets/img/logo.png" alt="" width="25" height="25" class="d-inline-block align-text-top"> <font face="Java Calligraphy" style="color: #c08457"; size="2" >Kerajinan Tangan Pangandaran</font></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -51,16 +52,14 @@ if($_SESSION['level']==""){
       </div>
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-        
-        <?php
+          <?php
         if($_SESSION['level']=='admin'){?>
-          
         <li class="nav-item">
          <a class="nav-link active" aria-current="page" href="admin/home.php"><font face="Tentang Nanti Demo" style="color: #c08457" size="5">Dashboard Admin</font></a>
         </li>
         <?php
         }
-          ?>
+        ?>
         <li class="nav-item">
          <a class="nav-link active" aria-current="page" href="index.php"><font face="Tentang Nanti Demo" style="color: #c08457" size="5">Home</font></a>
         </li>
@@ -76,95 +75,48 @@ if($_SESSION['level']==""){
         <li class="nav-item">
          <a class="nav-link" href="logout.php"><font face="Tentang Nanti Demo" style="color: #c08457"  size="5">Logout</font></a>
         </li>
+  </ul>
       </div>
     </div>
   </div>
 </nav>
 
-<!-- slide -->
+<div class="d-flex justify-content-center shadow p-3 mb-5"><embed type="application/pdf" src="dokumen/mulai.pdf" width="500" height="700"></embed><div class="d-flex justify-content-end"><a class="btn btn-warning" href="https://web.whatsapp.com/" role="button">
+  <font face="Tentang Nanti Demo" style="color: #fffff" size="5">
+<br>
+<br>
+<br>
+K
+<br>
+i
+<br>
+r
+<br>
+i
+<br>
+m
+<br>
+<br>
+<br>
+K
+<br>
+e
+<br>
+s
+<br> 
+i
+<br>
+n
+<br>
+i
+<br>
+<br>
+</font>
+<img src="assets/img/whatsapp.png" alt="" width="30" height="30" >
+</a></div>
+  </div>
 
-<img src="assets/img/543.png" class="img-fluid" alt="">
-
-
-    <!-- text -->
-<section class="jumbotron mb-5">
-    <div class="container">
-      <div class="row">  
-        <div class="col-sm-12">
-         <h2 class="welcome section-tittle text-center pt-5 profil"></h2>
-        </div>
-        <div class="text-center">
-          <h4 class="testing"></h4>
-        </div>   
-      </div>
-    </div>
-</section>
-
-
-<!-- categori -->
-<section class="categori py-5 mt-5" style="background-color: #eaeaea;">
   <div class="container">
-    <div class="row">
-      <h3 class="justify-content-center text-center border-2 my-3">Galery</h3>
-    </div>
-    <div class="row ">
-      <div class="col-lg-4 py-sm-2 pt-md-2 col-md-6" data-aos="zoom-out-right" data-aos-duration="2000">
-        <div class="card bg-primary text-white w-100">
-          <img src="assets/img/galeri1.jpg" style="height: 250px;" class="card-img" alt="...">
-          <div class="card-img">
-            <h5 class="card-title text-center">Penjual Kerang</h5>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 py-md-2 py-sm-2 col-md-6" data-aos="fade-down" data-aos-duration="2000" data-aos-delay="200">
-        <div class="card bg-primary text-white w-100">
-          <img src="assets/img/galeri2.jpg" style="height:250px"  class="card-img" alt="...">
-          <div class="card-img">
-            <h5 class="card-title text-center">Pengarajin</h5>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 py-md-2 py-sm-2 col-md-6" data-aos="zoom-out-left" data-aos-duration="2000" data-aos-delay="300">
-        <div class="card bg-primary text-white w-100">
-          <img src="assets/img/galeri3.jpg" height="250px" class="card-img" alt="...">
-          <div class="card-img">
-            <h5 class="card-title text-center">Kegiatan Ibu-Ibu PKK</h5>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 py-md-2 py-sm-2 col-md-6" data-aos="zoom-out-left" data-aos-duration="2000" data-aos-delay="400">
-        <div class="card bg-primary text-white w-100">
-          <img src="assets/img/galeri4.jpg" height="250px"  class="card-img" alt="...">
-          <div class="card-img">
-            <h5 class="card-title text-center">Pengrajin Kerang</h5>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 py-md-2 py-sm-2 col-md-6" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="500">
-        <div class="card bg-primary text-white w-100">
-          <img src="assets/img/galeri5.jpg" height="250px"  class="card-img" alt="...">
-          <div class="card-img">
-            <h5 class="card-title text-center">Pengrajin Kerang</h5>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 py-md-2 py-sm-2 col-md-6" data-aos="zoom-out-right" data-aos-duration="2000" data-aos-delay="600">
-        <div class="card bg-primary text-white w-100">
-          <img src="assets/img/galeri6.jpg" height="250px" class="card-img" alt="...">
-          <div class="card-img">
-            <h5 class="card-title text-center">Pengrajin limbah kulit kerang</h5>
-          </div>
-        </div>
-      </div>
-    </div>
-   </div>
-  </div>  
-</section>
-
-
-
-
-    <div class="container">
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
     <div class="col-md-4 d-flex align-items-center">
       <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
@@ -181,25 +133,14 @@ if($_SESSION['level']==""){
   </footer>
 </div>
 
-
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
-  
-  <!-- Gsap -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/TextPlugin.min.js"></script>
-  <script>
-    gsap.registerPlugin(TextPlugin);
-    gsap.to(".welcome", {text:"Welcome To Kerajinan Tangan Pangandaran", duration:3});
-    gsap.to(".testing", {text:"The online shopping platform for handcrafts of your choice, offers a smooth, fun and reliable shopping experience for millions of users in Indonesia.", duration:12, delay:2});
-  </script>
   <!-- AOS -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
-
 </body>
 </html>

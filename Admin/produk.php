@@ -51,10 +51,11 @@ if(isset ($_POST["cari"])){
 
 ?>
 <?php include('template/header.php');?>
-        <div id="layoutSidenav_content">
-            <main>
-                <div class="container-fluid px-4">
-                    <h1>Produk</h1>
+<div id="layoutSidenav_content">
+
+    <main>
+                <div class="container-fluid py-2">
+                    <h1 class=" border-bottom border-dark border-2 py-2" style="width: 180px;">Products</h1>
                    <!-- Button trigger modal -->
                     <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                     Tambah Data
@@ -98,7 +99,7 @@ if(isset ($_POST["cari"])){
                                         <?php echo $pdk["nama_toko"]; ?>
                                     </td>
                                     <td>
-                                        <?php echo $pdk["harga_barang"]; ?>
+                                        <?php echo rupiah($pdk["harga_barang"]);  ?>
                                     </td>
                                     <td><img src="img/<?php echo $pdk["foto_barang"]; ?>" width="130px"></td>
                                     <td>
@@ -244,6 +245,8 @@ if(isset ($_POST["cari"])){
 
         </div>
     </div>
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
@@ -254,6 +257,7 @@ if(isset ($_POST["cari"])){
     <script src="assets/demo/chart-bar-demo.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
     <script src="js/datatables-simple-demo.js"></script>
+
 
 </body>
 </html>
